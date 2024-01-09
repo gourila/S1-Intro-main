@@ -2,21 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
+}
 
 body{
-    background-color: aliceblue;
-    margin: 200px 50px;
-    background-color: black;
+    background: black;
+
+
 }
 .header{
     background-color: beige;
     display: flex;
 
+    align-items: center;
+    align-content: center;
+
+}
+.navbar-brand{
+    width: 250px;
 }
 .nav-item{
-    display: flex;
-    width: 300px;
+    display: inline ;
+    width: 400px;
+    background-color: aqua;
+    text-align: center;
+    justify-content:space-between;
 }
 a{
     text-decoration: none;
@@ -30,7 +39,12 @@ h3{
 p{
     color: gray;
 }
-section{
-    display: flex;
 
+.container{
+    width: 980px;
+    margin: 150px auto;
+    background-color: aliceblue;
+}
+.enssemble{
+    display: flex;
 }

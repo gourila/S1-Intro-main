@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <title>Liste interactive de cadeaux de Noël</title>
-    <meta name="description" content="Créer votre liste de cadeaux et envoyez-là à vos ami.e.s">
-    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css"> <!-- Le javascript est déjà lié. -->
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <title>Liste interactive de cadeaux de Noël</title>
+  <meta name="description" content="Créer votre liste de cadeaux et envoyez-là à vos ami.e.s">
+  <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css"> <!-- Le javascript est déjà lié. -->
+</head>
+<body>
+<div class="container">
   <header> <div class="header">
 
     <a class="navbar-brand" href="#">L'Atelier du bonheur Mercantile</a>
@@ -22,28 +23,29 @@
       </p>
     </div></div>
   </header>
-  <section><div class="section-gauche">
-    <h3>Ma liste de cadeaux interactive</h3>
-    <p class="text-muted ms-1 mb-3">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
-                                    ami.e.s.</p>
-    <form method="post">                    <!-- Ajouter la balise form, la méthode post va permettre d'envoyer par courriel -->
-      <h4 class="mb-3">Ajouter un item à la liste</h4>
-      <div class="mb-3">
-        <p>Description :</p>
-        <input type="text" id="desc" />
-      </div>
-      <div class="mb-4">
-        <span>Valeur estimée ($) :</span><br>
-        <input type="number" id="valeur">
-      </div>
-      <div class="d-grid gap-2">
-        <input type="button" value="Ajouter" onclick="ajouter()" />  <!-- Cliquer sur le bouton va appeler la fonction ajouter. -->
-        <br>
-        <input type="reset" value="Annuler" />      <!-- Remplacer les <button> par des <input ... -->
-      </div> </div>
-  </section>
-  <section><div class="section-droite">
-  <h3>Ma liste</h3>
+  <div class="enssemble">
+    <section><div class="section-gauche">
+      <h3>Ma liste de cadeaux interactive</h3>
+      <p class="text-muted ms-1 mb-3">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
+        ami.e.s.</p>
+      <form method="post">                    <!-- Ajouter la balise form, la méthode post va permettre d'envoyer par courriel -->
+        <h4 class="mb-3">Ajouter un item à la liste</h4>
+        <div class="mb-3">
+          <p>Description :</p>
+          <input type="text" id="desc" />
+        </div>
+        <div class="mb-4">
+          <span>Valeur estimée ($) :</span><br>
+          <input type="number" id="valeur">
+        </div>
+        <div class="d-grid gap-2">
+          <input type="button" value="Ajouter" onclick="ajouter()" />  <!-- Cliquer sur le bouton va appeler la fonction ajouter. -->
+          <br>
+          <input type="reset" value="Annuler" />      <!-- Remplacer les <button> par des <input ... -->
+        </div> </div>
+    </section>
+    <section><div class="section-droite">
+      <h3>Ma liste</h3>
       <div class="list" id="maListe">                   <!-- Remplacer p par div -->
         <p>Crocs des fêtes : <span>14$</span></p>
         <p>Une tuque des fêtes : <span>42$</span></p>
@@ -56,11 +58,14 @@
         <input type="submit" value="Confirmer et envoyer" /> <!-- Envoyer le formulaire par courriel -->
         <input onclick="effacer()" type="submit" value="Recommencer" /> <!-- Efface le courriel et refresh la page -->
       </div></div>
-  </section>
-      <!-- Préparer le contenu du courriel avec des input hidden -->
-      <input hidden name="Item_1" value="Crocs des fetes">
-      <input hidden name="Item_2" value="Une tuque des fetes">
-      <input hidden name="Item_3" value="Un chandail laid des fetes">
+    </section>
+    <!-- Préparer le contenu du courriel avec des input hidden -->
+    <input hidden name="Item_1" value="Crocs des fetes">
+    <input hidden name="Item_2" value="Une tuque des fetes">
+    <input hidden name="Item_3" value="Un chandail laid des fetes">
     </form>
-  </body>
+
+  </div>
+</div>
+</body>
 </html>
